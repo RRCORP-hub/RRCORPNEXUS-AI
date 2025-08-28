@@ -3,24 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RRCORPNEXUS AI - SINERGIA & AGROSYNC Nusantara</title>
+    <title>RRCORP NEXUS AI - SINERGIA & AGROSYNC Nusantara</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             --sinergia-gradient: linear-gradient(135deg, #00b4db 0%, #0083b0 100%);
             --agrosync-gradient: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-            --nexus-gradient: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            --indonesia-gradient: linear-gradient(135deg, #ff0000 0%, #ffffff 50%, #ff0000 100%);
         }
         
         body {
             font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+            background: linear-gradient(135deg, #0f1a2e 0%, #1a2b3e 50%, #152738 100%);
             color: #ffffff;
             min-height: 100vh;
-            overflow-x: hidden;
         }
         
         .orbitron-font {
@@ -28,62 +26,47 @@
         }
         
         .hero-section {
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
-            backdrop-filter: blur(10px);
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(0, 180, 219, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(67, 233, 123, 0.15) 0%, transparent 50%);
+            backdrop-filter: blur(20px);
         }
         
-        .component-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            transition: all 0.3s ease;
-        }
-        
-        .component-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        .indonesia-flag {
+            background: linear-gradient(to bottom, #ff0000 0%, #ff0000 50%, #ffffff 50%, #ffffff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
         }
         
         .sinergia-glow {
-            box-shadow: 0 0 30px rgba(0, 180, 219, 0.3);
+            box-shadow: 0 0 30px rgba(0, 180, 219, 0.4);
         }
         
         .agrosync-glow {
-            box-shadow: 0 0 30px rgba(67, 233, 123, 0.3);
+            box-shadow: 0 0 30px rgba(67, 233, 123, 0.4);
         }
         
-        .nexus-glow {
-            box-shadow: 0 0 30px rgba(250, 112, 154, 0.3);
+        .component-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            transition: all 0.4s ease;
         }
         
-        .pulse-animation {
-            animation: pulse 2s infinite;
+        .component-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
         }
         
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
+        .social-hover {
+            transition: all 0.3s ease;
         }
         
-        .typewriter {
-            overflow: hidden;
-            border-right: 3px solid #667eea;
-            white-space: nowrap;
-            margin: 0 auto;
-            letter-spacing: 0.15em;
-            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-        }
-        
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-        
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: #667eea; }
+        .social-hover:hover {
+            transform: scale(1.15) translateY(-3px);
+            filter: brightness(1.3);
         }
         
         .floating {
@@ -91,143 +74,69 @@
         }
         
         @keyframes float {
-            0% { transform: translateY(0px); }
+            0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
         }
         
-        .galaxy-bg {
-            background: 
-                radial-gradient(circle at 20% 20%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(118, 75, 162, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 40% 60%, rgba(0, 180, 219, 0.1) 0%, transparent 50%);
+        .pulse-animation {
+            animation: pulse 3s infinite;
         }
         
-        .ai-robot {
-            position: relative;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
-            border-radius: 20px;
-            overflow: hidden;
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
         }
         
-        .ai-robot::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #00b4db, #43e97b, #fa709a);
-            animation: rgb-flow 3s infinite;
-        }
-        
-        @keyframes rgb-flow {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        
-        .chat-bubble {
-            max-width: 80%;
-            padding: 15px;
-            border-radius: 20px;
-            margin: 10px 0;
-            position: relative;
-            animation: fadeIn 0.5s ease;
-        }
-        
-        .user-bubble {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            margin-left: auto;
-            border-bottom-right-radius: 5px;
-        }
-        
-        .ai-bubble {
-            background: linear-gradient(135deg, #4facfe, #00f2fe);
-            margin-right: auto;
-            border-bottom-left-radius: 5px;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .stats-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 20px;
-            transition: all 0.3s ease;
-        }
-        
-        .stats-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.08);
-        }
-        
-        .countup {
-            font-size: 2.5rem;
-            font-weight: 700;
+        .stats-number {
+            font-size: 3rem;
+            font-weight: 800;
             background: linear-gradient(135deg, #00b4db, #43e97b);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         
-        .video-container {
+        .gradient-border {
             position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border: double 2px transparent;
+            background-image: linear-gradient(rgba(18, 18, 37, 0.8), rgba(18, 18, 37, 0.8)), 
+                              linear-gradient(135deg, #00b4db, #43e97b);
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
         }
         
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        
-        .philosophy-text {
-            line-height: 1.8;
-            font-size: 1.1rem;
-            background: rgba(255, 255, 255, 0.02);
-            padding: 30px;
-            border-radius: 20px;
-            border-left: 4px solid #43e97b;
+        .indonesia-map-glow {
+            box-shadow: 0 0 50px rgba(255, 0, 0, 0.3);
         }
     </style>
 </head>
-<body class="min-h-screen galaxy-bg">
+<body class="min-h-screen">
     <!-- Navigation -->
-    <nav class="fixed w-full bg-black/80 backdrop-blur-md z-50 py-4">
+    <nav class="fixed w-full bg-black/90 backdrop-blur-xl z-50 py-4 border-b border-gray-800">
         <div class="container mx-auto px-6 flex justify-between items-center">
             <div class="flex items-center space-x-3">
-                <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center pulse-animation">
-                    <i class="fas fa-brain text-white text-xl"></i>
+                <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-xl flex items-center justify-center pulse-animation">
+                    <i class="fas fa-seedling text-white text-xl"></i>
                 </div>
                 <div>
-                    <span class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent orbitron-font">
-                        RRCORPNEXUS AI
+                    <span class="text-2xl font-bold bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent orbitron-font">
+                        RRCORP NEXUS
                     </span>
-                    <p class="text-xs text-gray-400">SINERGIA & AGROSYNC Nusantara</p>
+                    <p class="text-xs text-gray-400">SINERGIA & AGROSYNC AI</p>
                 </div>
             </div>
-            <div class="hidden md:flex space-x-8">
-                <a href="#sinergia" class="hover:text-blue-300 transition-colors">SINERGIA</a>
-                <a href="#agrosync" class="hover:text-green-300 transition-colors">AGROSYNC</a>
-                <a href="#philosophy" class="hover:text-purple-300 transition-colors">Filosofi</a>
-                <a href="#stats" class="hover:text-cyan-300 transition-colors">Valuasi</a>
-                <a href="#ai-robot" class="hover:text-pink-300 transition-colors">AI Robot</a>
-                <a href="#video" class="hover:text-yellow-300 transition-colors">Video</a>
+            
+            <div class="hidden lg:flex space-x-8">
+                <a href="#sinergia" class="hover:text-cyan-300 transition-colors font-medium">SINERGIA AI</a>
+                <a href="#agrosync" class="hover:text-green-300 transition-colors font-medium">AGROSYNC AI</a>
+                <a href="#impact" class="hover:text-blue-300 transition-colors font-medium">Dampak Nasional</a>
+                <a href="#network" class="hover:text-teal-300 transition-colors font-medium">Jaringan</a>
+                <a href="#connect" class="hover:text-purple-300 transition-colors font-medium">Terhubung</a>
             </div>
-            <button class="bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 rounded-full font-semibold hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105">
-                Join Revolution
-            </button>
+            
+            <a href="https://iacnnexus.netlify.app" class="bg-gradient-to-r from-purple-600 to-blue-600 px-6 py-3 rounded-full font-semibold hover:from-purple-700 hover:to-blue-700 transition-all transform hover:scale-105">
+                Global Ecosystem
+            </a>
         </div>
     </nav>
 
@@ -237,84 +146,257 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
                     <div class="mb-8">
-                        <span class="bg-gradient-to-r from-blue-400 to-green-400 text-sm px-4 py-2 rounded-full">
-                            Revolusi AI Indonesia 2024
+                        <span class="bg-gradient-to-r from-red-500 to-white text-sm px-6 py-2 rounded-full font-semibold">
+                            <span class="indonesia-flag">INDONESIA</span> ECOSYSTEM
                         </span>
                     </div>
+                    
                     <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 orbitron-font">
-                        <span class="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                            RRCORPNEXUS
+                        <span class="bg-gradient-to-r from-green-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                            RRCORP NEXUS AI
                         </span>
-                        <br>
-                        <span class="typewriter text-3xl md:text-4xl">AI CIVILIZATION</span>
                     </h1>
+                    
                     <p class="text-xl text-gray-300 mb-8 leading-relaxed">
-                        Menjembatani manusia, teknologi, dan alam semesta melalui AI yang beretika. 
-                        SINERGIA untuk energi dan pangan nasional, AGROSYNC untuk kemakmuran Nusantara.
+                        Mengintegrasikan <span class="text-cyan-400">SINERGIA AI</span> untuk energi & ketahanan pangan nasional, 
+                        dan <span class="text-green-400">AGROSYNC AI</span> untuk kemakmuran sektor pertanian Nusantara.
                     </p>
+                    
                     <div class="flex flex-wrap gap-4 mb-8">
-                        <button class="bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-4 rounded-full font-semibold hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105">
-                            <i class="fas fa-rocket mr-2"></i>Explore Ecosystem
-                        </button>
-                        <button class="border border-blue-400 text-blue-300 px-8 py-4 rounded-full font-semibold hover:bg-blue-400/10 transition-all">
-                            <i class="fas fa-play-circle mr-2"></i>Watch Vision
-                        </button>
+                        <a href="#sinergia" class="bg-gradient-to-r from-cyan-600 to-blue-600 px-8 py-4 rounded-full font-semibold hover:from-cyan-700 hover:to-blue-700 transition-all">
+                            <i class="fas fa-bolt mr-2"></i>SINERGIA AI
+                        </a>
+                        <a href="#agrosync" class="bg-gradient-to-r from-green-600 to-teal-600 px-8 py-4 rounded-full font-semibold hover:from-green-700 hover:to-teal-700 transition-all">
+                            <i class="fas fa-seedling mr-2"></i>AGROSYNC AI
+                        </a>
                     </div>
+                    
                     <div class="flex items-center space-x-6 text-sm text-gray-400">
                         <div class="flex items-center">
                             <i class="fas fa-shield-alt text-green-400 mr-2"></i>
-                            <span>AI Ethical Governance</span>
+                            <span>AI untuk Negeri</span>
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-globe-asia text-blue-400 mr-2"></i>
-                            <span>Global Impact</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-users text-purple-400 mr-2"></i>
-                            <span>Human-Centric</span>
+                            <span>Berdaya Saing Global</span>
                         </div>
                     </div>
                 </div>
+                
                 <div class="relative">
-                    <div class="floating">
-                        <img src="https://placehold.co/800x600" alt="Futuristic holographic interface showing Indonesia map with interconnected AI nodes, energy grids, and agricultural networks glowing with blue and green light" class="rounded-3xl shadow-2xl border-2 border-blue-500/30">
+                    <div class="floating indonesia-map-glow">
+                        <img src="https://placehold.co/600x400" alt="Peta Indonesia dengan jaringan AI dan IoT yang terhubung untuk pertanian dan energi berkelanjutan" class="rounded-2xl shadow-2xl border-2 border-green-500/30">
                     </div>
-                    <div class="absolute -top-6 -right-6 w-40 h-40 bg-blue-500/20 rounded-full blur-xl"></div>
-                    <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-purple-500/20 rounded-full blur-xl"></div>
-                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-green-500/10 rounded-full blur-2xl"></div>
+                    <div class="absolute -top-6 -right-6 w-28 h-28 bg-cyan-500/20 rounded-full blur-xl"></div>
+                    <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-green-500/20 rounded-full blur-xl"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SINERGIA Section -->
+    <!-- SINERGIA AI Section -->
     <section id="sinergia" class="py-20">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4 orbitron-font">SINERGIA INDONESIA</h2>
-                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
-                    Sistem Integrasi Ketahanan Pangan & Energi Nasional - Membangun Fondasi Indonesia Emas 2045
-                </p>
-            </div>
-
-            <div class="component-card sinergia-glow p-8 mb-12">
+            <div class="component-card sinergia-glow p-12">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div>
-                        <div class="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
-                            <i class="fas fa-bolt text-3xl text-white"></i>
+                        <div class="w-24 h-24 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-8">
+                            <i class="fas fa-bolt text-4xl text-white"></i>
                         </div>
-                        <h3 class="text-3xl font-bold mb-6 orbitron-font">SINERGIA NATIONAL CORE</h3>
-                        <p class="text-gray-300 mb-8 leading-relaxed text-lg">
-                            Mengintegrasikan data pangan dan energi nasional secara real-time, mengurangi kebocoran subsidi hingga 50%, 
-                            dan menciptakan sistem prediksi AI untuk ketahanan nasional jangka panjang.
+                        <h2 class="text-4xl font-bold mb-6 orbitron-font">SINERGIA AI</h2>
+                        <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                            Sistem Integrasi Ketahanan Pangan & Energi Nasional. Mengoptimalkan subsidi, 
+                            prediksi supply-demand, dan manajemen distribusi terintegrasi untuk Indonesia yang mandiri.
                         </p>
                         
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                            <div class="stats-card">
-                                <i class="fas fa-money-bill-wave text-blue-400 text-2xl mb-3"></i>
-                                <h4 class="font-semibold mb-2">Efisiensi Subsidi</h4>
-                                <div class="countup" id="subsidi-counter">0</div>
-                                <p class="text-sm text-gray-400">Triliun/tahun</p>
+                        <div class="grid grid-cols-2 gap-6 mb-8">
+                            <div class="gradient-border p-6 rounded-xl text-center">
+                                <div class="stats-number">400T+</div>
+                                <p class="text-sm text-gray-400">Potensi hemat subsidi/tahun</p>
                             </div>
-                            <div class="stats-card">
-                                <i class="fas
+                            <div class="gradient-border p-6 rounded-xl text-center">
+                                <div class="stats-number">500%</div>
+                                <p class="text-sm text-gray-400">ROI dalam 5 tahun</p>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-3 mb-8">
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-check-circle text-green-400"></i>
+                                <span>Integrasi data real-time 17 kementerian</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-check-circle text-green-400"></i>
+                                <span>Prediksi kebutuhan 50 tahun ke depan</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-check-circle text-green-400"></i>
+                                <span>Optimasi distribusi nasional</span>
+                            </div>
+                        </div>
+                        
+                        <button class="bg-cyan-600/20 text-cyan-300 px-8 py-3 rounded-full border border-cyan-500/30 hover:bg-cyan-600/40 transition-all">
+                            Lihat Dashboard
+                        </button>
+                    </div>
+                    
+                    <div class="relative">
+                        <div class="floating">
+                            <img src="https://placehold.co/600x400" alt="Dashboard AI Sinergia untuk monitoring energi dan pangan nasional Indonesia" class="rounded-2xl shadow-2xl">
+                        </div>
+                        <div class="absolute -top-4 -right-4 w-28 h-28 bg-cyan-500/20 rounded-full blur-xl"></div>
+                        <div class="absolute -bottom-4 -left-4 w-24 h-24 bg-blue-500/20 rounded-full blur-xl"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AGROSYNC AI Section -->
+    <section id="agrosync" class="py-20 bg-black/20">
+        <div class="container mx-auto px-6">
+            <div class="component-card agrosync-glow p-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 lg:order-1">
+                        <div class="floating">
+                            <img src="https://placehold.co/600x400" alt="Teknologi pertanian modern dengan IoT dan AI untuk Agrosync Nusantara" class="rounded-2xl shadow-2xl">
+                        </div>
+                    </div>
+                    
+                    <div class="order-1 lg:order-2">
+                        <div class="w-24 h-24 bg-gradient-to-r from-green-500 to-teal-500 rounded-2xl flex items-center justify-center mb-8">
+                            <i class="fas fa-seedling text-4xl text-white"></i>
+                        </div>
+                        <h2 class="text-4xl font-bold mb-6 orbitron-font">AGROSYNC AI</h2>
+                        <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                            Revolusi sektor pertanian, perkebunan, perikanan, dan peternakan Indonesia 
+                            dengan teknologi IoT, blockchain, dan AI prediction untuk kemandirian pangan.
+                        </p>
+                        
+                        <div class="grid grid-cols-2 gap-6 mb-8">
+                            <div class="gradient-border p-6 rounded-xl text-center">
+                                <div class="stats-number">900T</div>
+                                <p class="text-sm text-gray-400">Nilai ekonomis/tahun</p>
+                            </div>
+                            <div class="gradient-border p-6 rounded-xl text-center">
+                                <div class="stats-number">200B</div>
+                                <p class="text-sm text-gray-400">Potensi ekspor</p>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-3 mb-8">
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-check-circle text-green-400"></i>
+                                <span>Smart farming dengan drone & IoT</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-check-circle text-green-400"></i>
+                                <span>Blockchain supply chain</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-check-circle text-green-400"></i>
+                                <span>AgroToken untuk akses modal</span>
+                            </div>
+                        </div>
+                        
+                        <button class="bg-green-600/20 text-green-300 px-8 py-3 rounded-full border border-green-500/30 hover:bg-green-600/40 transition-all">
+                            Jelajahi Inovasi
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 orbitron-font">DAMPAK NASIONAL</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="text-center">
+                    <div class="stats-number">1.47K</div>
+                    <p class="font-semibold text-lg">Triliun Valuasi</p>
+                    <p class="text-gray-400">Ekosistem SINERGIA</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="stats-number">75%</div>
+                    <p class="font-semibold text-lg">Efisiensi</p>
+                    <p class="text-gray-400">Distribusi Pangan</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="stats-number">500K+</div>
+                    <p class="font-semibold text-lg">Peterman</p>
+                    <p class="text-gray-400">Terhubung</p>
+                </div>
+            </div>
+            
+            <div class="bg-black/30 p-8 rounded-2xl max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold mb-4">Visi Indonesia 2045</h3>
+                <p class="text-gray-300 mb-6">
+                    Menjadikan Indonesia sebagai pusat inovasi AI dan ketahanan pangan global, 
+                    dengan teknologi yang memberdayakan rakyat dan melestarikan alam.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Network Section -->
+    <section id="network" class="py-20 bg-black/20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 orbitron-font">JARINGAN NASIONAL</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 pulse-animation">
+                        <i class="fas fa-tractor text-2xl text-cyan-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Pertanian</h3>
+                    <p class="text-gray-400">34 Provinsi</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-green-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 pulse-animation">
+                        <i class="fas fa-fish text-2xl text-green-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Perikanan</h3>
+                    <p class="text-gray-400">17.504 Pulau</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 pulse-animation">
+                        <i class="fas fa-industry text-2xl text-blue-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Energi</h3>
+                    <p class="text-gray-400">8 Region</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-teal-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 pulse-animation">
+                        <i class="fas fa-network-wired text-2xl text-teal-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">IoT Network</h3>
+                    <p class="text-gray-400">National Coverage</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connect Section -->
+    <section id="connect" class="py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 orbitron-font">TERHUBUNG DENGAN KAMI</h2>
+            
+            <!-- Social Media Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+                <a href="https://tiktok.com/@rr.corp" target="_blank" class="social-hover">
+                    <div class="bg-gray-800/50 p-6 rounded-2xl hover:bg-gray-700/50 transition-all">
+                        <i class="fab fa-tiktok text-4xl text-pink-400 mb-3"></i>
+                        <h3 class="font-bold">TikTok</h3>
+                        <p class="text-gray-400">@rr.corp</p>
+                    </div>
+                </a>
+                
+                <a href="https://youtube.com/@RRCORP.company" target="_blank"
