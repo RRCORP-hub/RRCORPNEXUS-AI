@@ -3,19 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infinite AI Civilizations Nexus - SINERGIA & AGROSYNC Nusantara</title>
+    <title>RRCORPNEXUS AI - SINERGIA & AGROSYNC Nusantara</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --quantum-gradient: linear-gradient(135deg, #00b4db 0%, #0083b0 100%);
-            --neural-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            --blockchain-gradient: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-            --metaverse-gradient: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
-            --biosphere-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-            --dao-gradient: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            --sinergia-gradient: linear-gradient(135deg, #00b4db 0%, #0083b0 100%);
+            --agrosync-gradient: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            --nexus-gradient: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
         }
         
         body {
@@ -24,6 +21,10 @@
             color: #ffffff;
             min-height: 100vh;
             overflow-x: hidden;
+        }
+        
+        .orbitron-font {
+            font-family: 'Orbitron', sans-serif;
         }
         
         .hero-section {
@@ -44,28 +45,16 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
         
-        .quantum-glow {
+        .sinergia-glow {
             box-shadow: 0 0 30px rgba(0, 180, 219, 0.3);
         }
         
-        .neural-glow {
-            box-shadow: 0 0 30px rgba(245, 87, 108, 0.3);
-        }
-        
-        .blockchain-glow {
+        .agrosync-glow {
             box-shadow: 0 0 30px rgba(67, 233, 123, 0.3);
         }
         
-        .metaverse-glow {
+        .nexus-glow {
             box-shadow: 0 0 30px rgba(250, 112, 154, 0.3);
-        }
-        
-        .biosphere-glow {
-            box-shadow: 0 0 30px rgba(79, 172, 254, 0.3);
-        }
-        
-        .dao-glow {
-            box-shadow: 0 0 30px rgba(168, 237, 234, 0.3);
         }
         
         .pulse-animation {
@@ -106,30 +95,138 @@
             50% { transform: translateY(-20px); }
             100% { transform: translateY(0px); }
         }
+        
+        .galaxy-bg {
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(118, 75, 162, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 60%, rgba(0, 180, 219, 0.1) 0%, transparent 50%);
+        }
+        
+        .ai-robot {
+            position: relative;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        
+        .ai-robot::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #00b4db, #43e97b, #fa709a);
+            animation: rgb-flow 3s infinite;
+        }
+        
+        @keyframes rgb-flow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .chat-bubble {
+            max-width: 80%;
+            padding: 15px;
+            border-radius: 20px;
+            margin: 10px 0;
+            position: relative;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .user-bubble {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            margin-left: auto;
+            border-bottom-right-radius: 5px;
+        }
+        
+        .ai-bubble {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            margin-right: auto;
+            border-bottom-left-radius: 5px;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .stats-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .stats-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+        }
+        
+        .countup {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #00b4db, #43e97b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .philosophy-text {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            background: rgba(255, 255, 255, 0.02);
+            padding: 30px;
+            border-radius: 20px;
+            border-left: 4px solid #43e97b;
+        }
     </style>
 </head>
-<body class="min-h-screen">
+<body class="min-h-screen galaxy-bg">
     <!-- Navigation -->
     <nav class="fixed w-full bg-black/80 backdrop-blur-md z-50 py-4">
         <div class="container mx-auto px-6 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                    <i class="fas fa-brain text-white"></i>
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center pulse-animation">
+                    <i class="fas fa-brain text-white text-xl"></i>
                 </div>
-                <span class="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                    NEXUS AI
-                </span>
+                <div>
+                    <span class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent orbitron-font">
+                        RRCORPNEXUS AI
+                    </span>
+                    <p class="text-xs text-gray-400">SINERGIA & AGROSYNC Nusantara</p>
+                </div>
             </div>
             <div class="hidden md:flex space-x-8">
-                <a href="#quantum" class="hover:text-blue-300 transition-colors">Quantum Core</a>
-                <a href="#neural" class="hover:text-purple-300 transition-colors">Neural Collective</a>
-                <a href="#blockchain" class="hover:text-green-300 transition-colors">Blockchain</a>
-                <a href="#metaverse" class="hover:text-pink-300 transition-colors">Metaverse</a>
-                <a href="#biosphere" class="hover:text-cyan-300 transition-colors">Biosphere</a>
-                <a href="#dao" class="hover:text-teal-300 transition-colors">DAO Governance</a>
+                <a href="#sinergia" class="hover:text-blue-300 transition-colors">SINERGIA</a>
+                <a href="#agrosync" class="hover:text-green-300 transition-colors">AGROSYNC</a>
+                <a href="#philosophy" class="hover:text-purple-300 transition-colors">Filosofi</a>
+                <a href="#stats" class="hover:text-cyan-300 transition-colors">Valuasi</a>
+                <a href="#ai-robot" class="hover:text-pink-300 transition-colors">AI Robot</a>
+                <a href="#video" class="hover:text-yellow-300 transition-colors">Video</a>
             </div>
-            <button class="bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-2 rounded-full font-semibold hover:from-blue-700 hover:to-purple-700 transition-all">
-                Join Nexus
+            <button class="bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 rounded-full font-semibold hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105">
+                Join Revolution
             </button>
         </div>
     </nav>
@@ -137,319 +234,87 @@
     <!-- Hero Section -->
     <section class="hero-section min-h-screen flex items-center pt-20">
         <div class="container mx-auto px-6 py-20">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
-                    <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                    <div class="mb-8">
+                        <span class="bg-gradient-to-r from-blue-400 to-green-400 text-sm px-4 py-2 rounded-full">
+                            Revolusi AI Indonesia 2024
+                        </span>
+                    </div>
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 orbitron-font">
                         <span class="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                            Infinite AI Civilizations
+                            RRCORPNEXUS
                         </span>
                         <br>
-                        <span class="typewriter">NEXUS Platform</span>
+                        <span class="typewriter text-3xl md:text-4xl">AI CIVILIZATION</span>
                     </h1>
                     <p class="text-xl text-gray-300 mb-8 leading-relaxed">
-                        Membangun masa depan Indonesia sebagai pusat peradaban AI global melalui integrasi Quantum Computing, 
-                        Neural Networks, dan Blockchain Sovereign. SINERGIA & AGROSYNC Nusantara untuk kemakmuran berkelanjutan.
+                        Menjembatani manusia, teknologi, dan alam semesta melalui AI yang beretika. 
+                        SINERGIA untuk energi dan pangan nasional, AGROSYNC untuk kemakmuran Nusantara.
                     </p>
-                    <div class="flex flex-wrap gap-4">
-                        <button class="bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-3 rounded-full font-semibold hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105">
-                            Explore Ecosystem
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <button class="bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-4 rounded-full font-semibold hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105">
+                            <i class="fas fa-rocket mr-2"></i>Explore Ecosystem
                         </button>
-                        <button class="border border-blue-400 text-blue-300 px-8 py-3 rounded-full font-semibold hover:bg-blue-400/10 transition-all">
-                            Watch Demo
+                        <button class="border border-blue-400 text-blue-300 px-8 py-4 rounded-full font-semibold hover:bg-blue-400/10 transition-all">
+                            <i class="fas fa-play-circle mr-2"></i>Watch Vision
                         </button>
+                    </div>
+                    <div class="flex items-center space-x-6 text-sm text-gray-400">
+                        <div class="flex items-center">
+                            <i class="fas fa-shield-alt text-green-400 mr-2"></i>
+                            <span>AI Ethical Governance</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-globe-asia text-blue-400 mr-2"></i>
+                            <span>Global Impact</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-users text-purple-400 mr-2"></i>
+                            <span>Human-Centric</span>
+                        </div>
                     </div>
                 </div>
                 <div class="relative">
                     <div class="floating">
-                        <img src="https://placehold.co/800x600" alt="Holographic interface showing interconnected AI nodes and data streams with blue and purple neon glow representing Quantum AI network" class="rounded-2xl shadow-2xl">
+                        <img src="https://placehold.co/800x600" alt="Futuristic holographic interface showing Indonesia map with interconnected AI nodes, energy grids, and agricultural networks glowing with blue and green light" class="rounded-3xl shadow-2xl border-2 border-blue-500/30">
                     </div>
-                    <div class="absolute -top-4 -right-4 w-32 h-32 bg-blue-500/20 rounded-full blur-xl"></div>
-                    <div class="absolute -bottom-4 -left-4 w-24 h-24 bg-purple-500/20 rounded-full blur-xl"></div>
+                    <div class="absolute -top-6 -right-6 w-40 h-40 bg-blue-500/20 rounded-full blur-xl"></div>
+                    <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-purple-500/20 rounded-full blur-xl"></div>
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-green-500/10 rounded-full blur-2xl"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- System Overview -->
-    <section class="py-20">
+    <!-- SINERGIA Section -->
+    <section id="sinergia" class="py-20">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">Architecture Ecosystem NEXUS</h2>
+                <h2 class="text-4xl font-bold mb-4 orbitron-font">SINERGIA INDONESIA</h2>
                 <p class="text-xl text-gray-400 max-w-3xl mx-auto">
-                    Enam pilar fundamental yang membentuk ekosistem Infinite AI Civilizations Nexus untuk Indonesia
+                    Sistem Integrasi Ketahanan Pangan & Energi Nasional - Membangun Fondasi Indonesia Emas 2045
                 </p>
             </div>
 
-            <!-- Quantum AI Hypercore -->
-            <div id="quantum" class="component-card quantum-glow p-8 mb-12">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div class="component-card sinergia-glow p-8 mb-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div>
-                        <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
-                            <i class="fas fa-atom text-2xl text-white"></i>
+                        <div class="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
+                            <i class="fas fa-bolt text-3xl text-white"></i>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4">Quantum AI Hypercore (QAHC)</h3>
-                        <p class="text-gray-300 mb-6">
-                            Superkomputer nasional berbasis komputasi kuantum yang memproses data real-time dari seluruh Indonesia. 
-                            Digital Twin Indonesia untuk prediksi 50 tahun ke depan.
+                        <h3 class="text-3xl font-bold mb-6 orbitron-font">SINERGIA NATIONAL CORE</h3>
+                        <p class="text-gray-300 mb-8 leading-relaxed text-lg">
+                            Mengintegrasikan data pangan dan energi nasional secara real-time, mengurangi kebocoran subsidi hingga 50%, 
+                            dan menciptakan sistem prediksi AI untuk ketahanan nasional jangka panjang.
                         </p>
-                        <div class="grid grid-cols-2 gap-4 mb-6">
-                            <div class="bg-black/30 p-4 rounded-lg">
-                                <i class="fas fa-brain text-blue-400 mb-2"></i>
-                                <h4 class="font-semibold">Exascale Computing</h4>
-                                <p class="text-sm text-gray-400">1.000.000.000.000.000.000 operasi/detik</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                            <div class="stats-card">
+                                <i class="fas fa-money-bill-wave text-blue-400 text-2xl mb-3"></i>
+                                <h4 class="font-semibold mb-2">Efisiensi Subsidi</h4>
+                                <div class="countup" id="subsidi-counter">0</div>
+                                <p class="text-sm text-gray-400">Triliun/tahun</p>
                             </div>
-                            <div class="bg-black/30 p-4 rounded-lg">
-                                <i class="fas fa-satellite text-cyan-400 mb-2"></i>
-                                <h4 class="font-semibold">IoT Integration</h4>
-                                <p class="text-sm text-gray-400">10M+ sensor terhubung</p>
-                            </div>
-                        </div>
-                        <button class="bg-blue-600/20 text-blue-300 px-6 py-2 rounded-full border border-blue-500/30 hover:bg-blue-600/40 transition-all">
-                            Explore QAHC
-                        </button>
-                    </div>
-                    <div class="relative">
-                        <img src="https://placehold.co/600x400" alt="Futuristic quantum computing center with holographic data visualization and floating interfaces showing complex algorithms" class="rounded-xl shadow-xl">
-                        <div class="absolute top-4 right-4 bg-blue-600/80 text-white px-3 py-1 rounded-full text-sm">
-                            Live Processing
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Neural Collective -->
-            <div id="neural" class="component-card neural-glow p-8 mb-12">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                    <div class="order-2 lg:order-1">
-                        <img src="https://placehold.co/600x400" alt="Network of interconnected human brains with AI nodes showing neural connections and data exchange in purple and pink light" class="rounded-xl shadow-xl">
-                    </div>
-                    <div class="order-1 lg:order-2">
-                        <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6">
-                            <i class="fas fa-network-wired text-2xl text-white"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4">Neural Collective (NC)</h3>
-                        <p class="text-gray-300 mb-6">
-                            Jaringan otak kolektif manusia-AI berbasis Brain-Computer Interface. 
-                            Gotong royong digital untuk pengambilan keputusan nasional yang cepat dan tepat.
-                        </p>
-                        <div class="space-y-3 mb-6">
-                            <div class="flex items-center space-x-3">
-                                <i class="fas fa-check-circle text-green-400"></i>
-                                <span>Real-time neural voting system</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <i class="fas fa-check-circle text-green-400"></i>
-                                <span>BCI integration for scientists & farmers</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <i class="fas fa-check-circle text-green-400"></i>
-                                <span>Collective intelligence platform</span>
-                            </div>
-                        </div>
-                        <button class="bg-purple-600/20 text-purple-300 px-6 py-2 rounded-full border border-purple-500/30 hover:bg-purple-600/40 transition-all">
-                            Join Collective
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Smart Contract Ecosystem -->
-            <div id="blockchain" class="component-card blockchain-glow p-8 mb-12">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                    <div>
-                        <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-xl flex items-center justify-center mb-6">
-                            <i class="fas fa-link text-2xl text-white"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4">Smart-Contract Ecosystem</h3>
-                        <p class="text-gray-300 mb-6">
-                            Blockchain sovereign Indonesia untuk tokenisasi sumber daya vital. 
-                            Menghapus kebocoran subsidi dan membuka pasar digital global.
-                        </p>
-                        <div class="grid grid-cols-2 gap-4 mb-6">
-                            <div class="bg-black/30 p-4 rounded-lg">
-                                <i class="fas fa-seedling text-green-400 mb-2"></i>
-                                <h4 class="font-semibold">AgroToken</h4>
-                                <p class="text-sm text-gray-400">Hasil panen & perkebunan</p>
-                            </div>
-                            <div class="bg-black/30 p-4 rounded-lg">
-                                <i class="fas fa-bolt text-yellow-400 mb-2"></i>
-                                <h4 class="font-semibold">EnergiToken</h4>
-                                <p class="text-sm text-gray-400">Listrik & EBT</p>
-                            </div>
-                        </div>
-                        <button class="bg-green-600/20 text-green-300 px-6 py-2 rounded-full border border-green-500/30 hover:bg-green-600/40 transition-all">
-                            Explore Tokens
-                        </button>
-                    </div>
-                    <div class="relative">
-                        <img src="https://placehold.co/600x400" alt="Blockchain network visualization with green nodes and connections representing smart contracts and token economy" class="rounded-xl shadow-xl">
-                        <div class="absolute top-4 right-4 bg-green-600/80 text-white px-3 py-1 rounded-full text-sm">
-                            Live Trading
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Metaverse Section -->
-            <div id="metaverse" class="component-card metaverse-glow p-8 mb-12">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                    <div class="order-2 lg:order-1">
-                        <img src="https://placehold.co/600x400" alt="Immersive virtual reality environment showing agricultural simulation and futuristic interface with holographic displays" class="rounded-xl shadow-xl">
-                    </div>
-                    <div class="order-1 lg:order-2">
-                        <div class="w-16 h-16 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-xl flex items-center justify-center mb-6">
-                            <i class="fas fa-vr-cardboard text-2xl text-white"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4">Omni-Dimensional Metaverse</h3>
-                        <p class="text-gray-300 mb-6">
-                            Platform AR/VR untuk pendidikan, riset, dan perdagangan global. 
-                            Simulasi kebijakan sebelum implementasi dunia nyata.
-                        </p>
-                        <div class="space-y-3 mb-6">
-                            <div class="flex items-center space-x-3">
-                                <i class="fas fa-globe-asia text-yellow-400"></i>
-                                <span>Agro-Metaverse: Simulasi pertanian</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <i class="fas fa-industry text-orange-400"></i>
-                                <span>Energy-Metaverse: Infrastruktur EBT</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <i class="fas fa-landmark text-red-400"></i>
-                                <span>Policy-Metaverse: Uji coba kebijakan</span>
-                            </div>
-                        </div>
-                        <button class="bg-pink-600/20 text-pink-300 px-6 py-2 rounded-full border border-pink-500/30 hover:bg-pink-600/40 transition-all">
-                            Enter Metaverse
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Biosphere Engine -->
-            <div id="biosphere" class="component-card biosphere-glow p-8 mb-12">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                    <div>
-                        <div class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
-                            <i class="fas fa-leaf text-2xl text-white"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4">AI Biosphere Engine</h3>
-                        <p class="text-gray-300 mb-6">
-                            Sistem AI untuk restorasi ekosistem dan perdagangan karbon global. 
-                            Monitoring hutan, laut, dan biodiversitas Indonesia secara real-time.
-                        </p>
-                        <div class="grid grid-cols-2 gap-4 mb-6">
-                            <div class="bg-black/30 p-4 rounded-lg">
-                                <i class="fas fa-tree text-green-400 mb-2"></i>
-                                <h4 class="font-semibold">Forest Monitoring</h4>
-                                <p class="text-sm text-gray-400">Kalimantan, Papua, Sumatera</p>
-                            </div>
-                            <div class="bg-black/30 p-4 rounded-lg">
-                                <i class="fas fa-water text-blue-400 mb-2"></i>
-                                <h4 class="font-semibold">Marine Restoration</h4>
-                                <p class="text-sm text-gray-400">Mangrove & coral reefs</p>
-                            </div>
-                        </div>
-                        <button class="bg-cyan-600/20 text-cyan-300 px-6 py-2 rounded-full border border-cyan-500/30 hover:bg-cyan-600/40 transition-all">
-                            Monitor Ecosystems
-                        </button>
-                    </div>
-                    <div class="relative">
-                        <img src="https://placehold.co/600x400" alt="AI-powered environmental monitoring dashboard showing real-time data from Indonesian rainforests and marine ecosystems" class="rounded-xl shadow-xl">
-                        <div class="absolute top-4 right-4 bg-cyan-600/80 text-white px-3 py-1 rounded-full text-sm">
-                            Active Monitoring
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- DAO Governance -->
-            <div id="dao" class="component-card dao-glow p-8">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                    <div class="order-2 lg:order-1">
-                        <img src="https://placehold.co/600x400" alt="Decentralized governance interface showing transparent voting system and community participation in decision-making processes" class="rounded-xl shadow-xl">
-                    </div>
-                    <div class="order-1 lg:order-2">
-                        <div class="w-16 h-16 bg-gradient-to-r from-teal-300 to-purple-300 rounded-xl flex items-center justify-center mb-6">
-                            <i class="fas fa-users text-2xl text-white"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4">Neural DAO Governance</h3>
-                        <p class="text-gray-300 mb-6">
-                            Sistem tata kelola terdesentralisasi berbasis AI dan blockchain. 
-                            Transparansi penuh dalam pengambilan keputusan nasional dan global.
-                        </p>
-                        <div class="space-y-3 mb-6">
-                            <div class="flex items-center space-x-3">
-                                <i class="fas fa-shield-alt text-teal-400"></i>
-                                <span>Anti-corruption blockchain system</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <i class="fas fa-vote-yea text-purple-400"></i>
-                                <span>Global democratic participation</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <i class="fas fa-balance-scale text-indigo-400"></i>
-                                <span>Transparent policy implementation</span>
-                            </div>
-                        </div>
-                        <button class="bg-teal-600/20 text-teal-300 px-6 py-2 rounded-full border border-teal-500/30 hover:bg-teal-600/40 transition-all">
-                            Participate in DAO
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Integration Diagram -->
-    <section class="py-20 bg-black/30">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">Integrated Ecosystem Flow</h2>
-                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
-                    Bagaimana keenam komponen NEXUS bekerja bersama menciptakan ekosistem AI yang tak terbatas
-                </p>
-            </div>
-            
-            <div class="relative">
-                <div class="grid grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- QAHC -->
-                    <div class="text-center p-6 bg-blue-600/10 rounded-xl border border-blue-500/30">
-                        <div class="w-20 h-20 mx-auto bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4">
-                            <i class="fas fa-atom text-3xl text-white"></i>
-                        </div>
-                        <h4 class="font-bold mb-2">QAHC</h4>
-                        <p class="text-sm text-gray-300">Pusat Kendali Data</p>
-                    </div>
-                    
-                    <!-- Neural Collective -->
-                    <div class="text-center p-6 bg-purple-600/10 rounded-xl border border-purple-500/30">
-                        <div class="w-20 h-20 mx-auto bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4">
-                            <i class="fas fa-network-wired text-3xl text-white"></i>
-                        </div>
-                        <h4 class="font-bold mb-2">Neural Collective</h4>
-                        <p class="text-sm text-gray-300">Input Masyarakat</p>
-                    </div>
-                    
-                    <!-- Blockchain -->
-                    <div class="text-center p-6 bg-green-600/10 rounded-xl border border-green-500/30">
-                        <div class="w-20 h-20 mx-auto bg-gradient-to-r from-green-500 to-teal-500 rounded-xl flex items-center justify-center mb-4">
-                            <i class="fas fa-link text-3xl text-white"></i>
-                        </div>
-                        <h4 class="font-bold mb-2">Blockchain</h4>
-                        <p class="text-sm text-gray-300">Distribusi Ekonomi</p>
-                    </div>
-                    
-                    <!-- Metaverse -->
-                    <div class="text-center p-6 bg-pink-600/10 rounded-xl border border-pink-500/30">
-                        <div class="w-20 h-20 mx-auto bg-gradient-to-r from-pink-500 to-yellow-500 rounded-xl flex items-center justify-center mb-4">
-                            <i class="fas fa-vr-cardboard text-3xl text-white"></i>
-                        </div>
-                        <h4 class="font-bold mb-2">Metaverse</h4>
-                        <p class="text-sm text-gray-300">Simulasi & Diplomasi</p>
-                    </div>
-                    
-                    <!-- Biosphere -->
-                    <div class="text-center p-6 bg-cyan-600/10 rounded-xl border border-cyan-500/30">
-                        <div class="w-20 h-20 mx-auto bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center 
-
+                            <div class="stats-card">
+                                <i class="fas
